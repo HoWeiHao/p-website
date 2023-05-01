@@ -28,7 +28,6 @@ const project = {
                     type: 'string'
                 }
             ]
-
         }, 
         {
             name: 'url',
@@ -40,8 +39,8 @@ const project = {
             title: 'Content',
             type: 'array',
             of: [{ type: 'block' }]
-        },
-    ] ,
-};
+        }
+    ]
+}
 
 export default project;
