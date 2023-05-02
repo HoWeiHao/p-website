@@ -1,8 +1,12 @@
 import  config  from "@/sanity.config";
+import p_type from "./p_type-schema";
+import { getP_types } from "../sanity-utils";
+import getTypes from "../../types/p_type-list";
+import p_types from "../../types/p_type-list";
 
 const project = {
-    name: 'animation',
-    title: 'Animations',
+    name: 'project',
+    title: 'Projects',
     type: 'document',
     fields: [
         {
@@ -11,10 +15,22 @@ const project = {
             type: 'string',
         },
         {
+            name: 'p_type',
+            title: 'Project Type',
+            type: "string",
+            options: { list: p_types}
+        },
+        {
             name: 'slug',
             title: 'Slug',
             type: 'slug',
-            options: { source: 'name' }
+            options: {
+                source: (project) => {
+                  return `/blog/${project.p_type}/${project.name}`;
+                },
+                slugify: (slug) => slug.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
+            },
+
         },
         {
             name: 'image',
@@ -42,5 +58,7 @@ const project = {
         }
     ]
 }
+
+
 
 export default project;
