@@ -6,32 +6,32 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <section >
-      <div className="mt-5 grid grid-cols-2 gap-6 justify-between items-center">
-        <span>
-          <h1 className="text-5xl font-extrabold">Hey there, 
+    <section>
+      <div className=" border-2 border-gray-500 rounded-lg p-1 mt-5 grid grid-cols-2 gap-6 justify-items-center items-center">
+        <span className="py-30">
+          <h1 className="text-6xl font-extrabold">Hey there, 
             <br></br>
               I&apos;m
             <br></br>
           </h1>
           <h1>
-            <span className="text-6xl font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent"> Ho Wei Hao</span>
+            <span className="text-7xl font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent"> Wei Hao</span>
           </h1>
         </span>
         <span>
           <Image 
             src='/Images/Photo1.jpg'
-            alt='/Images/Photo2.jpg'
-            width={750}
-            height={300}
-            className="rounded-lg "
+            alt='A photo of me.'
+            width={250}
+            height={50}
+            className="rounded-lg items-center"
             />
         </span>
       </div>
 
       <div>
-        <h2 className="mt-12 text-2xl text-gray-600">Welcome to my page!</h2>
-
+        <h2 className="mt-12 mb-3 text-2xl text-gray-600 underlined">Welcome to my page!</h2>
+      
         <p className="mt-3 text-gray-700 text-0.1xl px=30" style={{ fontSize: 15 }}>
           I am a Year 2 Electrical Engineering student studying at the National University of Singapore who is eager to take on new experiences and learn new things. I also have a Second Major in Innovation and Design.
         </p>
@@ -47,11 +47,8 @@ export default async function Home() {
         <p className="mt-3 text-gray-700 text-0.1xl px=30" style={{ fontSize: 15 }}>
           As of now, I am eagerly looking for opportunities to grow in my technical engineering skills as well as soft skills like leadership and public speaking.
         </p>
-
       </div>
-      
-        
-      </section>
+    </section>
 
   )
 
