@@ -30,9 +30,9 @@ export default async function RootLayout({
           </div>
 
         </header>
+        <hr></hr>
         <main className="py-20">{children}</main>
       </body>
-      <br></br>
     </html>
   )
 }
