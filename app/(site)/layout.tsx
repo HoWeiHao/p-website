@@ -19,20 +19,25 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="max-w-5xl mx-auto py-5">
-        <header className="flex items-center justify-between">
-          <Link href="/" className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold">Wei Hao</Link>
-          <div className="flex items-center gap-5 text-sm text-gray-600">
+      <body>
+        <div className="max-w-5x mx-auto">
+        <header className="flex items-center justify-between bg-black-500 py-5 px-40">
+          <Link href="/" className="text-blue-700 text-lg font-bold">Wei Hao</Link>
+          <div className="flex items-center gap-5 text-sm">
             {pages.map((page) => (
               <Link key={page._id} href={`/${page.slug}`} className="hover:underline">{page.title}</Link>
             ))}
 
           </div>
-
         </header>
+        </div>
         <hr></hr>
-        <main className="py-15">{children}</main>
+        <main className="py-0">{children}</main>
+        
       </body>
+      <div className="bg-blue-700 py-4 mt-20">
+
+      </div>
     </html>
   )
 }
