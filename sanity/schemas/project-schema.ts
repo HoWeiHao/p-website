@@ -25,10 +25,10 @@ const project = {
             title: 'Slug',
             type: 'slug',
             options: {
-                source: (project) => {
+                source: (project: any) => {
                   return `/blog/${project.p_type}/${project.name}`;
                 },
-                slugify: (slug) => slug.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
+                slugify: (slug: any) => slug.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
             },
 
         },
