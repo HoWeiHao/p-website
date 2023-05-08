@@ -66,9 +66,9 @@ export async function getP_types(): Promise<P_type[]> {
       _id,
       _createdAt,
       type,
-      "slug": slug.current,
+      "image": image.asset->url,
       url,
-      content
+      "slug": slug.current,
     }`
   )
 }
@@ -78,8 +78,9 @@ export async function getP_type(slug: string): Promise<P_type> {
     groq`*[_type == "p_type" && slug.current == $slug][0]{
       _id,
       _createdAt,
-      "p_type",
+      type,
       "slug": slug.current,
+      "image": image.asset->url,
       url,
     }`,
     { slug }

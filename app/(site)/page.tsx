@@ -7,8 +7,8 @@ export default async function Home() {
 
   return (
     <section>
-      <div className="bg-gray-100 p-1 grid grid-cols-2 gap-6 justify-items-center items-center py-30 ">
-        <span className="">
+      <div className="bg-gray-100 p-1 grid grid-cols-2 gap-6 justify-items-center items-center py-30">
+        <span>
           <h1 className="text-6xl font-bold">Hey there, 
             <br></br>
               I&apos;m

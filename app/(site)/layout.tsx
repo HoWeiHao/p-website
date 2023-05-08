@@ -24,6 +24,11 @@ export default async function RootLayout({
         <header className="flex items-center justify-between bg-black-500 py-5 px-40">
           <Link href="/" className="text-blue-700 text-lg font-bold">Wei Hao</Link>
           <div className="flex items-center gap-5 text-sm">
+            
+            <Link href="/p_types">
+              Projects
+            </Link>
+
             {pages.map((page) => (
               <Link key={page._id} href={`/${page.slug}`} className="hover:underline">{page.title}</Link>
             ))}

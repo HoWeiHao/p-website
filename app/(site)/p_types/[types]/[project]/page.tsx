@@ -1,48 +1,15 @@
 import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from '@portabletext/react';
 import Image from "next/image"
-import imageUrlBuilder from '@sanity/image-url'
-
-const builder = imageUrlBuilder({
-  projectId: '<your-project-id>',
-  dataset: '<your-dataset>',
-})
-
-function urlFor(source: any) {
-  return builder.image(source)
-}
 
 type Props = {
   params: { project: string }
 }
 
-type ImageProps = {
-  node: {
-    asset: any;
-    alt: string;
-  }
-}
-
-type VideoProps = {
-  node: {
-    asset: any;
-  }
-}
-
-const serializers = {
-  types: {
-    image: ({ node }: ImageProps) => {
-      return <Image src={urlFor(node.asset).url()} alt={node.alt} />
-    },
-    video: ({ node }: ImageProps) => {
-      return <video src={urlFor(node.asset).url()} controls width="640" height="360"></video>
-    }
-  }
-}
 
 export default async function Project({ params }: Props) {
-  const slug = params.project;
-  const project = await getProject(slug);
+  const slug = params.project.split('/');
+  const project = await getProject(slug[0]);
 
   return <div>
     <header className="flex items-center justify-between">

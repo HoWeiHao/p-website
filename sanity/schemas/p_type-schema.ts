@@ -4,7 +4,7 @@ const p_type = {
   type: "document",
   fields: [
     {
-      name: "p_type",
+      name: "type",
       title: "Type",
       type: "string"
     },
@@ -14,6 +14,19 @@ const p_type = {
       type: "slug",
       options: { source: "p_type", maxLength: 96 }
     },
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+          {
+              name: 'alt',
+              title: 'Alt',
+              type: 'string'
+          }
+      ]
+    }, 
   ]
 }
 
