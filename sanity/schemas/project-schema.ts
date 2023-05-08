@@ -3,6 +3,7 @@ import p_type from "./p_type-schema";
 import { getP_types } from "../sanity-utils";
 import getTypes from "../../types/p_type-list";
 import p_types from "../../types/p_type-list";
+import { PortableText } from "@portabletext/react";
 
 const project = {
     name: 'project',
@@ -26,7 +27,7 @@ const project = {
             type: 'slug',
             options: {
                 source: (project: any) => {
-                  return `/blog/${project.p_type}/${project.name}`;
+                  return `${project.p_type}/${project.name}`;
                 },
                 slugify: (slug: any) => slug.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
             },
@@ -51,14 +52,28 @@ const project = {
             type: 'url'
         },
         {
-            name: 'content',
-            title: 'Content',
-            type: 'array',
-            of: [{ type: 'block' }]
+          name: "content",
+          title: "Content",
+          type: "array",
+          of: [
+            {
+              type: "block",
+              styles: [{ title: "Normal", value: "normal" }],
+              lists: [],
+            },
+            {
+              type: "image",
+              options: { hotspot: true },
+            },
+            {
+              type: "file",
+            },
+          ],
+        },
+        
+          ]
         }
-    ]
-}
-
-
+      
+        
 
 export default project;
