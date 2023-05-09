@@ -53,6 +53,14 @@ const project = {
             ]
         }, 
         {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          options: {
+            accept: 'video/*'
+          }
+        },
+        {
             name: 'url',
             title: 'URL',
             type: 'url'

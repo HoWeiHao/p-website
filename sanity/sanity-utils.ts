@@ -81,8 +81,10 @@ export async function getP_type(slug: string): Promise<P_type> {
       type,
       "slug": slug.current,
       "image": image.asset->url,
+      "video": video.asset->url,
       url,
     }`,
     { slug }
   )
 }
+

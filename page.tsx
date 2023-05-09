@@ -22,6 +22,14 @@ export default async function Project({ params }: Props) {
         View Project
       </a>
     </header>
+
+    <video controls>{
+        project.video &&
+      
+        <source src={project.video && urlFor(project.video).url()} type="video/mp4" />
+      }
+      </video>
+      
     <Image src={project.image} alt={project.name} width={20} height={10} className="mt-10 border-2 border-gray-700 object-cover rounded-xl" />
 
     <div className="text-lg text-gray-700 mt-5">
