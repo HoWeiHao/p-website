@@ -19,9 +19,9 @@ export async function getProjects(): Promise<Project[]> {
   )
 }
 
-export async function getProject(slug: string): Promise<Project> {
+export async function getProject(project: string): Promise<Project> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "project" && slug.current == $slug][0]{
+    groq`*[_type == "project" && id_tag == $project][0]{
       _id,
       _createdAt,
       name,
@@ -30,7 +30,7 @@ export async function getProject(slug: string): Promise<Project> {
       url,
       content
     }`,
-    { slug }
+    { project }
   )
 }
 

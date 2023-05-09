@@ -16,10 +16,16 @@ const project = {
             type: 'string',
         },
         {
+          name: 'id_tag',
+          title: 'ID Tag',
+          type: 'string',
+          options: { source: "name"}
+        },
+        {
             name: 'p_type',
             title: 'Project Type',
             type: "string",
-            options: { list: p_types}
+            options: { list: p_types }
         },
         {
             name: 'slug',
@@ -27,7 +33,7 @@ const project = {
             type: 'slug',
             options: {
                 source: (project: any) => {
-                  return `${project.p_type}/${project.name}`;
+                  return `p_types/${project.p_type}/${project.name}`;
                 },
                 slugify: (slug: any) => slug.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
             },
@@ -72,7 +78,7 @@ const project = {
         },
         
           ]
-        }
+        } 
       
         
 
