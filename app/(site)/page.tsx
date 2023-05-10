@@ -18,12 +18,12 @@ export default async function Home() {
             <span className="text-7xl font-extrabold text-blue-700"> Wei Hao</span>
           </h1>
         </span>
-        <span>
+        <span className="pt-5">
           <Image 
             src='/Images/Photo3.png'
             alt='A photo of me.'
-            width={250}
-            height={50}
+            width={400}
+            height={200}
             className="rounded-lg items-center"
             />
         </span>
