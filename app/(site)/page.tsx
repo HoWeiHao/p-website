@@ -9,9 +9,11 @@ export default async function Home() {
     <section>
       <div className="bg-gray-100 p-1 grid grid-cols-2 gap-6 justify-items-center items-center py-30">
         <span>
-          <h1 className="text-6xl font-bold">Hey there, 
+          <h1 className="text-3xl font-bold">Hey there, 
             <br></br>
+            <h1 className="text-7xl font-extrabold">
               I&apos;m
+              </h1>
             <br></br>
           </h1>
           <h1>
@@ -20,7 +22,7 @@ export default async function Home() {
         </span>
         <span>
           <Image 
-            src='/Images/Photo1.png'
+            src='/Images/Photo3.png'
             alt='A photo of me.'
             width={250}
             height={50}
