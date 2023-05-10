@@ -11,9 +11,7 @@ export default async function Home() {
         <span>
           <h1 className="text-3xl font-bold">Hey there, 
             <br></br>
-            <h1 className="text-7xl font-extrabold">
               I&apos;m
-              </h1>
             <br></br>
           </h1>
           <h1>
