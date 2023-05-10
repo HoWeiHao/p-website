@@ -6,7 +6,6 @@ import { P_type } from "@/types/P_type";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
-    //may have to add "&& p_type = ""p_type"
     groq`*[_type == "project" ]{
       _id,
       _createdAt,
@@ -66,9 +65,10 @@ export async function getP_types(): Promise<P_type[]> {
       _id,
       _createdAt,
       type,
+      "slug": slug.current,
       "image": image.asset->url,
       url,
-      "slug": slug.current,
+      content
     }`
   )
 }
@@ -81,7 +81,6 @@ export async function getP_type(slug: string): Promise<P_type> {
       type,
       "slug": slug.current,
       "image": image.asset->url,
-      "video": video.asset->url,
       url,
     }`,
     { slug }

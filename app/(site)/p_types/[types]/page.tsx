@@ -6,7 +6,7 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <div className="items-center justify-between py-5 px-40">
+    <div className="items-center justify-between ">
       <h1 className="text-blue-700 text-5xl drop-shadow font-extrabold py-3"></h1>  
 
       <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8">{projects.map((project) => (
@@ -20,7 +20,7 @@ export default async function Home() {
               className="object-cover rounded-lg border border-gray-500"
             />
           )}
-          <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+          <div className="py-5 mt-2 font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
             {project.name}
           </div>
         </Link>

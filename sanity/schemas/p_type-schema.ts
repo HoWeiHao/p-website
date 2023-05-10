@@ -25,8 +25,13 @@ const p_type = {
               title: 'Alt',
               type: 'string'
           }
-      ]
+        ]
     }, 
+    {
+      name: 'url',
+      title: 'URL',
+      type: 'url'
+   },
   ]
 }
 
