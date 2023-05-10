@@ -64,9 +64,6 @@ export async function getP_types(): Promise<P_type[]> {
     groq`*[_type == "p_type" ]{
       _id,
       _createdAt,
-      type,
-      "slug": slug.current,
-      "image": image.asset->url,
       url,
       content
     }`

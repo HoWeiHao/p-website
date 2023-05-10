@@ -4,6 +4,8 @@ import Link from 'next/link'
 
 export default async function Home() {
   const p_types = await getP_types();
+  console.log(p_types)
+  
 
   return (
     <div className="items-center justify-between py-5 px-40">
@@ -42,6 +44,4 @@ export default async function Home() {
       ))}
       </div>
     </div>
-  )
-
-}
+)}

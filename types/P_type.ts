@@ -3,6 +3,7 @@ export type P_type = {
   createdAt: Date;
   type: string;
   slug: string;
+  image: string;
   url: string;
   name: string;
 }

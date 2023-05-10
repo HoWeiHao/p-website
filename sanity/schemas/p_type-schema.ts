@@ -19,14 +19,7 @@ const p_type = {
       title: 'Image',
       type: 'image',
       options: { hotspot: true },
-      fields: [
-          {
-              name: 'alt',
-              title: 'Alt',
-              type: 'string'
-          }
-        ]
-    }, 
+    },
     {
       name: 'url',
       title: 'URL',
