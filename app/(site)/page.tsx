@@ -7,8 +7,8 @@ export default async function Home() {
 
   return (
     <section>
-      <div className="bg-gray-100 p-1 grid grid-cols-2 gap-6 justify-items-center items-center py-30">
-        <span>
+      <div className="bg-gray-100 p-1 grid grid-cols-2 gap-3 justify-items-center items-center py-30 px-40">
+        <span className="pl-10">
           <h1 className="text-6xl font-bold">Hey there, 
             <br></br>
               I&apos;m
@@ -18,12 +18,12 @@ export default async function Home() {
             <span className="text-7xl font-extrabold text-blue-700"> Wei Hao</span>
           </h1>
         </span>
-        <span className="pt-5">
+        <span className="pt-5 items-left">
           <Image 
             src='/Images/Photo3.png'
             alt='A photo of me.'
-            width={400}
-            height={200}
+            width={500}
+            height={300}
             className="rounded-lg items-center"
             />
         </span>
