@@ -25,9 +25,9 @@ export default async function Home() {
 
       <div>{p_types.map((p_type) => (
         <Link href={`/p_types/${p_type.slug}`} key={p_type._id} className="hover:scale-105 hover:border-blue-500 transition">
-          <div className="bg-gradient-to-r from-blue-700 via-gray-200 to-gray-100 p-1 grid grid-cols-2 gradient-from-center justify-items-center items-center my-5 rounded-xl"> 
+          <div className="bg-gradient-to-r from-blue-700 to-gray-50 p-1 grid grid-cols-2 gradient-from-center justify-items-center items-center my-5 rounded-xl"> 
          
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent py-5 hover:scale-105 hover:border-blue-500 transition">
+            <h2 className="text-4xl font-bold text-gray-100  hover:scale-105 hover:text-grey-300 transition">
               {p_type.type}
             </h2>
 
