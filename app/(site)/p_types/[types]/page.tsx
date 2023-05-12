@@ -2,8 +2,15 @@ import { getProjects } from "@/sanity/sanity-utils"
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default async function Home() {
-  const projects = await getProjects();
+type Props = {
+  params: { types: string };
+}
+  
+export default async function Projects({ params }: Props) {
+  console.log("hello");
+  console.log(params.types);
+  const projects = await getProjects(params.types);
+  console.log(projects);
 
   return (
     <div className="items-center justify-between ">
@@ -28,5 +35,4 @@ export default async function Home() {
       </div>
     </div>
   )
-
 }
