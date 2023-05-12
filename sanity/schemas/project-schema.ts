@@ -1,6 +1,7 @@
 
 import p_types from "../../types/p_type-list";
-import { PortableText } from "@portabletext/react";
+
+const p_types_lowercase = p_types.map(type => type.toLowerCase().replace(/\s+/g, "-"));
 
 const project = {
   name: 'project',
@@ -23,11 +24,7 @@ const project = {
         title: 'Project Type',
         type: "string",
         options: { 
-          list: [
-            { title: 'Animations', value: 'animations' },
-            { title: '3D-Modelling', value: '3d-modelling' },
-            { title: 'Engineering Projects', value: 'engineering-projects' }
-          ]
+          list: p_types_lowercase,
         }
     },
     {
