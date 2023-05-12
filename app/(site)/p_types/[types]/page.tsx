@@ -7,10 +7,8 @@ type Props = {
 }
   
 export default async function Projects({ params }: Props) {
-  console.log("hello");
-  console.log(params.types);
   const projects = await getProjects(params.types);
-  console.log(projects);
+  
 
   return (
     <div className="items-center justify-between ">
