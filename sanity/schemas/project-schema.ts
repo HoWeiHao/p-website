@@ -22,7 +22,13 @@ const project = {
         name: 'p_type',
         title: 'Project Type',
         type: "string",
-        options: { list: p_types }
+        options: { 
+          list: [
+            { title: 'Animations', value: 'animations' },
+            { title: '3D-Modelling', value: '3d-modelling' },
+            { title: 'Engineering Projects', value: 'engineering-projects' }
+          ]
+        }
     },
     {
         name: 'slug',

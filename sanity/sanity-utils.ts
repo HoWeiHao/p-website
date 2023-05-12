@@ -4,17 +4,19 @@ import clientConfig from './config/client-config'
 import { Page } from "@/types/Page";
 import { P_type } from "@/types/P_type";
 
-export async function getProjects(): Promise<Project[]> {
+export async function getProjects(types: string): Promise<Project[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "project" ]{
+    groq`*[_type == "project" && p_type == $types]{
       _id,
       _createdAt,
       name,
+      p_type,
       "slug": slug.current,
       "image": image.asset->url,
       url,
       content
-    }`
+    }`,
+    {types}
   )
 }
 
@@ -64,6 +66,9 @@ export async function getP_types(): Promise<P_type[]> {
     groq`*[_type == "p_type" ]{
       _id,
       _createdAt,
+      type,
+      "slug": slug.current,
+      "image": image.asset->url,
       url,
       content
     }`

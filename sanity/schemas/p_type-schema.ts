@@ -12,7 +12,7 @@ const p_type = {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "p_type", maxLength: 96 }
+      options: { source: "type", maxLength: 96 }
     },
     {
       name: 'image',
