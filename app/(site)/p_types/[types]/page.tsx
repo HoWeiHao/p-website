@@ -22,11 +22,12 @@ export default async function Projects({ params }: Props) {
               src={project.image}
               alt={project.name}
               width={300}
-              height={50}
+              height={150}
+              layout="responsive"
               className="object-cover border-2 rounded-lg border-gray-700"
-            />
+            /> 
           )}
-          <div className="mt-2 font-extrabold text-gray-800">
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', font: 'extrabold', color: 'black', margin: 'top'}} className="mt-2 font-extrabold text-gray-800 flex justify-content-center items-align-center">
             {project.name}
           </div>
         </Link>
