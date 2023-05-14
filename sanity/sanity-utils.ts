@@ -6,7 +6,7 @@ import { P_type } from "@/types/P_type";
 
 export async function getProjects(types: string): Promise<Project[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "project" && p_type == $types]{
+    groq`*[_type == "project" && p_type == $types] | order(_createdAt desc){
       _id,
       _createdAt,
       name,
