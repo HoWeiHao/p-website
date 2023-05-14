@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <section>
-      <div className="bg-gray-100 p-1 grid grid-cols-2 gap-3 justify-items-center items-center py-30 px-40">
+      <div className="bg-gray-100 p-1 grid md:grid-cols-2 lg:grid-cols-2 justify-items-center items-center py-30 px-40">
         <span className="pl-10">
           <h1 className="text-6xl font-bold">Hey there, 
             <br></br>

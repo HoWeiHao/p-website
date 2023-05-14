@@ -14,11 +14,7 @@ export default async function Project({ params }: Props) {
     <div>
       <h1 className="py-5 px-40 text-blue-700">{project.name}</h1>
       
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
         <Image src={project.image} width={600} height={300} alt={project.name} className="justify-content mt-10 border-2 border-gray-700 object-cover rounded-xl" />
       </div>
       <div className="py-5 px-40 mx-20 text-lg text-gray-700 mt-5">
